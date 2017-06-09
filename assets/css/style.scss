@@ -6,12 +6,8 @@
 .page-menu {
 	ul {
 		list-style-type: none;
-		a {
-			font-size: 1em;
-			font-weight: bold;
-			margin: 0.5em 2em;
-		};
 		h1 {
+			margin-left: 4em;
 			font-size: 1.5em;
 			font-weight: normal;
 			color: #159957;
@@ -20,4 +16,4 @@
 }
 
 @media screen and (min-width: 96em) { .page-menu { float: left; } }
-@media screen and (max-width: 96em) { .page-menu { ul { display: flex; } } }
+@media screen and (max-width: 96em) { .page-menu { ul { display: flex; } h1 {display: none; }} }
