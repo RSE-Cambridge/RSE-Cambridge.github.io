@@ -12,6 +12,8 @@ including the triple dashed line, at the top of the file. Web pages should be
 submitted in the `_pages` directory to prevent clutter, and should be in
 MarkDown (`.md`) format.
 
+Also note that the main page is the README.md file in the repository root.
+
 ```
 ---
 title: Page title
