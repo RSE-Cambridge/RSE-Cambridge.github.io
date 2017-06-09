@@ -7,8 +7,8 @@ menu: false
 # Publishing pages
 
 Each page that is to be published on the website should contain (at least) the
-5 lines on the top of this file, including the triple dashed line, at the top of
-the file (if reading this file raw) or shown below. Web pages should be
+5 lines on the top of this file (if reading this file raw) or shown below,
+including the triple dashed line, at the top of the file. Web pages should be
 submitted in the `_pages` directory to prevent clutter, and should be in
 MarkDown (`.md`) format.
 
