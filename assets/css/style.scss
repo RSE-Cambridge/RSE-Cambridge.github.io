@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-menu {
+	ul {
+		list-style-type: none;
+		li {
+			margin: 0em 2em;
+		}
+	}
+}
+
+@media screen and (min-width: 96em) { .page-menu { float: left; } }
+@media screen and (max-width: 96em) { .page-menu { ul { display: flex; } } }
