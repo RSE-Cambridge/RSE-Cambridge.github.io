@@ -11,9 +11,12 @@
 		<script>
 			function showMenuOnLargeScreen() {
 				var menu = document.getElementById("menu-list");
+				console.log(menu)l
 				var isTooSmall = !window.matchMedia("(min-width: 42em)")["matches"];
+				console.log(isTooSmall);
 
 				if(isTooSmall) return;
+				console.log("Not too small")
 
 				if (menu.style.display == "block") {
 					menu.style.display = "";
