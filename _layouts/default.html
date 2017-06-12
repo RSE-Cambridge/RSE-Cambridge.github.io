@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 		<script>
 			function showMenuOnLargeScreen() {
+				var menu = document.getElementById("menu-list");
 				var isTooSmall = !window.matchMedia("(min-width: 42em)")["matches"];
 
 				if(isTooSmall) return;
@@ -28,11 +29,11 @@
 				if(isTooWide) return;
 
 				if (menu.hidden) {
-					menu.style.display = "";
+					menu.style.display = "block";
 					menu.hidden = false
 				}
 				else {
-					menu.style.display = "none";
+					menu.style.display = "";
 					menu.hidden = true;
 				}
 			}
