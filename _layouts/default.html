@@ -15,7 +15,7 @@
 
 				if(isTooSmall) return;
 
-				if (menu.hidden) {
+				if (menu.style.display == "block") {
 					menu.style.display = "";
 					menu.hidden = false;
 				}
@@ -28,13 +28,11 @@
 
 				if(isTooWide) return;
 
-				if (menu.hidden) {
-					menu.style.display = "block";
-					menu.hidden = false
+				if (menu.style.display == "block") {
+					menu.style.display = "";
 				}
 				else {
-					menu.style.display = "";
-					menu.hidden = true;
+					menu.style.display = "block";
 				}
 			}
 		</script>
