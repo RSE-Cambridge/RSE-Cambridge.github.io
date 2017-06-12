@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 		<script>
 			function toggleMenu() {
-				var menu = document.getElementById("pageMenu");
+				var menuSection = document.getElementById("page-menu");
+				var menu = document.getElementById("menu-list");
+
+				if (menuSection.style.float == "left") return;
+
 				if (menu.hidden) {
-					menu.hidden = false;
+					menu.style.display = "block";
+					menu.hidden = false
 				}
 				else {
+					menu.style.display = "none";
 					menu.hidden = true;
 				}
 			}
@@ -33,9 +39,9 @@
       {% endif %}
     </section>
     
-    <section class="page-menu">
-			<h1 onclick="toggleMenu">Menu</h1>
-      <ul id="pageMenu">
+    <section id="page-menu" onclick="toggleMenu">
+			<h1>Menu</h1>
+      <ul id="menu-list">
 				<li>
 					<a href="{{ site.url }}{{ site.baseurl}}">Home</a>
 				</li>
