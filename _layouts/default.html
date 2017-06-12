@@ -13,6 +13,9 @@
 				var menuSection = document.getElementById("page-menu");
 				var menu = document.getElementById("menu-list");
 
+				console.log(menuSection)
+				console.log(menuSection.style.float)
+
 				if (menuSection.style.float == "left") return;
 
 				if (menu.hidden) {
@@ -39,8 +42,8 @@
       {% endif %}
     </section>
     
-    <section id="page-menu" onclick="toggleMenu">
-			<h1>Menu</h1>
+    <section id="page-menu" >
+			<h1 onclick="toggleMenu">Menu</h1>
       <ul id="menu-list">
 				<li>
 					<a href="{{ site.url }}{{ site.baseurl}}">Home</a>
