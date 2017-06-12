@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-.page-menu {
+#page-menu {
 	h1 {
 		text-align: center;
 		font-size: 1.5em;
@@ -18,6 +18,6 @@
 	}
 }
 
-@media screen and (min-width: 96em) { .page-menu { float: left; } }
-@media screen and (max-width: 96em) { .page-menu { ul { display: flex; }; h1 { display: none; } } }
-@media screen and (max-width: 42em) { .page-menu { ul { display: block; }; h1 { display: block; } } }
+@media screen and (min-width: 96em) { #page-menu { float: left; } }
+@media screen and (max-width: 96em) { #page-menu { ul { display: flex; }; h1 { display: none; } } }
+@media screen and (max-width: 42em) { #page-menu { ul { display: block; }; h1 { display: block; } } }
