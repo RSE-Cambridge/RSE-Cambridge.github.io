@@ -9,6 +9,17 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 		<script>
+			function showMenuOnLargeScreen() {
+				var isTooSmall = !window.matchMedia("(min-width: 42em)")["matches"];
+
+				if(isTooSmall) return;
+
+				if (menu.hidden) {
+					menu.style.display = "";
+					menu.hidden = false;
+				}
+			}
+
 			function toggleMenu() {
 				var menu = document.getElementById("menu-list");
 
@@ -17,7 +28,7 @@
 				if(isTooWide) return;
 
 				if (menu.hidden) {
-					menu.style.display = "block";
+					menu.style.display = "";
 					menu.hidden = false
 				}
 				else {
@@ -27,7 +38,7 @@
 			}
 		</script>
   </head>
-  <body>
+  <body onresize=(showMenuOnLargeScreen)>
     <section class="page-header">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
@@ -41,7 +52,7 @@
     </section>
     
     <section class="page-menu" >
-			<h1 onclick="toggleMenu">Menu</h1>
+			<h1 onclick="toggleMenu()">Menu</h1>
       <ul id="menu-list">
 				<li>
 					<a href="{{ site.url }}{{ site.baseurl}}">Home</a>
